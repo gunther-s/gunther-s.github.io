@@ -6,22 +6,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
         <script>
-            //Input: none
-            // Processing
-            // Output
-            
-            function test() {
-                var testing = addEnds([8, 6, 3, 6, 78, 6])
-                document.getElementById('output').innerHTML = testing;
+            function doInputOutput() {
+                var tempF = parseFloat(document.getElementById('t').value)
+                var speed = parseFloat(document.getElementById('w').value)
+                
+                var answer = windChill(tempF, speed)
+                document.getElementById('output').innerHTML = answer;
             }
     
-            function addEnds(list) {
-                var end = list.length -1
-                var answer1 = list[end]
-                var start = list.length - (list.length)
-                var answer2 = list[start]
-                var result = answer1 + answer2
-                return result
+    
+            function windChill(tempF, speed) {
+                var s = Math.pow(speed, 0.16)
+                var f = 35.74 + 0.6215 * tempF - (35.75 * s) + 0.4275 * tempF * s
+                return f
             }
         </script>
     </head>
@@ -30,5 +27,9 @@
 <h5>You look good, I guess.</h5>
 <p>Lorem Ipsum etc.</p>
 <p>This is very basic.</p>
+Please input temp:<input type="text" id="t"><br/>
+    Wind speed: <input type="text" id="w"><br/>
+    <button type="button" onclick="doInputOutput()">Check</button>
+    <div id="output"></div>
     </body>
 </html>
