@@ -5,6 +5,25 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
+        <script>
+            //Input: none
+            // Processing
+            // Output
+            
+            function test() {
+                var testing = addEnds([8, 6, 3, 6, 78, 6])
+                document.getElementById('output').innerHTML = testing;
+            }
+    
+            function addEnds(list) {
+                var end = list.length -1
+                var answer1 = list[end]
+                var start = list.length - (list.length)
+                var answer2 = list[start]
+                var result = answer1 + answer2
+                return result
+            }
+        </script>
     </head>
     <body>
 <h1>Welcome</h1>
