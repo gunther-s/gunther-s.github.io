@@ -1,38 +1,36 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        <script>
-            function doInputOutput() {
-                var tempF = parseFloat(document.getElementById('t').value)
-                var speed = parseFloat(document.getElementById('w').value)
-                
-                var answer = windChill(tempF, speed)
-                document.getElementById('output').innerHTML = answer;
-            }
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        function doInputOutput() {
+            var tempF = parseFloat(document.getElementById('t').value)
+            var speed = parseFloat(document.getElementById('w').value)
+            var answer = windChill(tempF, speed)
+            document.getElementById('output').innerHTML = answer;
+        }
     
-    
-            function windChill(tempF, speed) {
-                var s = Math.pow(speed, 0.16)
-                var f = 35.74 + 0.6215 * tempF - (35.75 * s) + 0.4275 * tempF * s
-                return f
-            }
-        </script>
-    </head>
-    <body>
-<h1>Welcome</h1>
-<h2>You look good, I guess.</h2>
-<h5>Lorem Ipsum etc.</h5>
-<p>This is very basic.</p>
+        function windChill(tempF, speed) {
+            var s = Math.pow(speed, 0.16)
+            var f = 35.74 + 0.6215 * tempF - (35.75 * s) + 0.4275 * tempF * s
+            return f
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <h2>You look good, I guess.</h2>
+    <h5>Lorem Ipsum etc.</h5>
+    <p>This is very basic.</p>
 <br>
-<p><b>Wind Chill calculator</b></p>
-Please input temp in F degrees: <input type="text" id="t"><br/>
+    <p><b>Wind Chill calculator</b></p>
+    Please input temp in F degrees: <input type="text" id="t"><br/>
     Wind speed in mph: <input type="text" id="w"><br/>
     <button type="button" onclick="doInputOutput()">Check</button>
-    <br>
+<br>
     Wind chill: <div id="output"></div>
-    </body>
+</body>
 </html>
