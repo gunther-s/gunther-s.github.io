@@ -1,10 +1,14 @@
 /* This is for screened devices*/
 
-/* 1. General Style rulers
-
-2. Mobile First Devices */
 
 /* Import statements */
 @import url('https://fonts.googleapis.com/css?family=Sansita');
 
 /* general style rules */
+h1, h2, h3, h4, h5, h6{
+    font-family: sansita, sans-serif;
+}
+
+body{
+    font-family: helvetica, sans-serif;
+}
