@@ -31,12 +31,43 @@ body{
 
 .site-brand{
     font-size: 5vw;
-    display: inline-block;
+    display: inline;
 }
 
 #logo {
-    display:inline-block;
+    width: 2em;
+    height: auto;
 }
 
+/* Place the navbar at the bottom of the page, and make it stick */
+.bottomnavbar {
+    background-color: white;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Style the links inside the navigation bar */
+.bottomnavbar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.bottomnavbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.bottomnavbar a.active {
+    background-color: black;
+    color: white;
+}
 /* border: 270px */
 /* margin: 5px */
