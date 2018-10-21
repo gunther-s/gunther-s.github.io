@@ -15,7 +15,7 @@
 * ****************************** */
 /* 1.  Includes (fonts and supplementary stylesheets) */
 /* 1.1 Normalize Import */  
-@import url('normalize.css');
+@import url('/weather/css/normalize.css');
 /* 1.2 Google Font Import */ 
 @import url('https://fonts.googleapis.com/css?family=Sansita');
 
