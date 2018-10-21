@@ -31,6 +31,11 @@ body{
 
 .site-brand{
     font-size: 5vw;
+    display: inline-block;
+}
+
+#logo {
+    display:inline-block;
 }
 
 /* border: 270px */
