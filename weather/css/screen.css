@@ -34,6 +34,9 @@ body{
     display: inline;
 }
 
+/* border: 270px */
+/* margin: 5px */
+
 #logo {
     width: 2em;
     height: auto;
@@ -52,6 +55,7 @@ body{
 .bottomnavbar a {
     float: left;
     display: block;
+    justify-content: center;
     color: black;
     text-align: center;
     padding: 10px 14px;
@@ -69,5 +73,11 @@ body{
     background-color: black;
     color: white;
 }
-/* border: 270px */
-/* margin: 5px */
+
+
+/* 4. Larger Screen Rules */
+
+@media screen and (min-width: 720px) {
+    /* All CSS rules for large screens go here */
+
+}
