@@ -1,0 +1,25 @@
+@media screen and (min-width:760px){
+
+
+#div{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly
+
+}
+#background, nav>ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+}
+
+section{
+    border: 1px dashed black;
+}
+
+#hourly-temps ul{
+    display: flex;
+    flex-flow: column-reverse;
+
+}
+

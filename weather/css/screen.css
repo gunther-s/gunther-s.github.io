@@ -81,3 +81,39 @@ body{
     /* All CSS rules for large screens go here */
 
 }
+
+#bigF {
+    font-size: 110px;
+    margin-top: 0.2em;
+    margin-bottom: 0;
+    padding-left: 0.05em;
+}
+
+#degreesR,
+#degreesB {
+    margin: 0px 10px 0px 10px;
+    font-size: 25px;
+
+}
+
+#degreesR {
+    color: red;
+}
+
+#degreesB {
+    color: #0e89d5;
+}
+
+#degrees {
+    margin: 0em;
+}
+
+#mph {
+    font-size: 23px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+#mph+p {
+    font-size: 15px;
+}
