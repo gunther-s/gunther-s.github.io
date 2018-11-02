@@ -117,3 +117,13 @@ body{
 #mph+p {
     font-size: 15px;
 }
+
+
+/* #hourly-temps li{
+    flex-shrink: 0;
+    border-right: 1px solid blue;
+    padding:0 10px;
+}
+#hourly-temps li:last-child{
+    border-right: none;
+} */
