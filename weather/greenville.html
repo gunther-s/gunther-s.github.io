@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en-us">
+ <head>
+  <meta charset="UTF-8">
+  <title>Franklin ID Weather For You</title>
+  <meta name="description" content="This page gives you weather for Greenville, SC.">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/weather/css/screen.css" type="text/css" media="screen">
+ </head>
+
+ <body>
+    <header id="page-header">
+        <img src="/weather/images/plan-images/raindrop-emoji-png-4.png" alt="the site logo" id="logo">
+        <!-- check ME! --><h1 class="site-brand">The Weather Site</h1>
+
+        <nav class="navbar">
+            <a href="#current">Current</a>
+            <a href="#search">Search</a>
+            <a href="/weather/franklinsite.html">Franklin ID</a>
+            <a href="/weather/greenville.html" class="active">Greenville ID</a>
+        </nav>
+    </header>
+
+    <main id="page-main">
+        <h1 id="locationName">Greenville, SC</h1>
+        <section id="locationInfo">
+            <ul>
+               <li><span class="bold">Zip:</span> 29601  |</li>
+               <li><span class="bold">Elevation: </span> 966 ft.  |</li>
+               <li><span class="bold">Location:</span> -82.4, 34.85</li>
+            </ul>
+       </section>
+   <div id="curWeather">
+       <section id="temps" class="tile">
+           <h2>Temperature</h2>
+           <p id="currentTemp">65&deg;F</p>
+           <p class="highLow" id="h">72&deg;F</p>
+           <p class="highLow" id="l">51&deg;F</p>
+           <p>Feels Like</p>
+       </section>
+       <section id="wind" class="tile">
+           <h2>Wind</h2>
+           <p>8 mph</p>
+           <p>Direction: SW</p>
+           <p>Gusts: 8 mph</p>
+       </section>    
+       <section id="summary" class="tile">
+           <h2 id="rain-title">Thunderstorms</h2>
+       </section>
+   </div>
+   <section id="hourly" class="tile">
+           <h3>Hourly Forecast</h3>
+           <ul>
+               <li>12am: 55&deg;F</li>
+               <li>1am: 55&deg;F</li>
+               <li>2am: 56&deg;F</li>
+               <li>3am: 57&deg;F</li>
+               <li>4am: 57&deg;F</li>
+               <li>5am: 57&deg;F</li>
+               <li>6am: 59&deg;F</li>
+               <li>7am: 59&deg;F</li>
+               <li>8am: 59&deg;F</li>
+               <li>9am: 60&deg;F</li>
+               <li>10am: 61&deg;F</li>
+               <li>11am: 63&deg;F</li>
+               <li>12pm: 64&deg;F</li>
+               <li>1pm: 64deg;F</li>
+               <li>2pm: 66&deg;F</li>
+               <li>3pm: 69&deg;F</li>
+               <li>4pm: 71&deg;F</li>
+               <li>5pm: 72&deg;F</li>
+               <li>6pm: 71&deg;F</li>
+               <li>7pm: 61&deg;F</li>
+               <li>8pm: 57&deg;F</li>
+               <li>9pm: 55&deg;F</li>
+               <li>10pm: 52&deg;F</li>
+               <li>11pm: 61&deg;F</li>
+           </ul>
+       </section>
+</main>
+
+ <footer id="page-footer">
+        &copy;2018 - The Weather Site
+      </footer>
+</body>
+</html>
