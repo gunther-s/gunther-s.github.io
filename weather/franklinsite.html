@@ -13,69 +13,71 @@
         <img src="/weather/images/plan-images/raindrop-emoji-png-4.png" alt="the site logo" id="logo">
         <!-- check ME! --><h1 class="site-brand">The Weather Site</h1>
 
-        <div class="bottomnavbar">
+        <nav class="navbar">
             <a href="#current" class="active">Current</a>
             <a href="#search">Search</a>
             <a href="/weather/franklinsite.html">Franklin ID</a>
             <a href="/weather/greenville.html">Greenville ID</a>
-        </div>
+        </nav>
     </header>
 
-<main>
-    <h2>Franklin, Idaho</h2>
-    <ul>
-        <li>Zip: 83237</li>
-        <li>|Elevation: 4501 ft.</li>
-        <li>|Location: 42.0135, 111.8072</li>
-    </ul>
-    <div id="curWeather">
-        <section id="temps" class="tile">
-            <h2 class="hide">Temperature</h2>
-            <p id="bigF">24°F</p>
-            <p id="degrees"><scan id="degreesR">34F</scan> <scan id="degreesB">21F</scan></p>
-            <p id="feelsLike">Feels Like 21F</p>
-        </section>
-        <section id="wind" class="tile">
-            <h2 class="hide">Wind</h2>
-            <p>N</p>
-            <p id="mph">2 mph</p>
-            <p><b>Direction:</b> SW <br>
-                <b>Gusts:</b> 5mph
-            </p>
-        </section>
-        <section id="summary" class="tile">
-            <h2>Rain</h2>
-            <img src="" alt="An image goes here">
-        </section>
-    </div>
-
-    <h3>Temperature</h3>
-    <p>24 &#176; F</p>
-    <p>34F</p>
-    <p>21F</p>
-    <p>Feels Like 21F</p>
-
-    <h3>Wind</h3>
-    <p>N</p>
-    <p>2 mph</p>
-    <p>Direction: NW</p>
-    <p>Guests: 5mph</p>
-
-    <h3>Sunny</h3>
-
-    <h4>Hourly Forecast</h4>
-    <ul>
-        <li>12am: 21F</li>
-        <li>|1am: 21F</li>
-        <li>|2am: 21F</li>
-        <li>|3am: 20F</li>
-        <li>|4am: 20F</li>
-        <li>|5am: 20F</li>
-        <li>|6am: 20F</li>
-        <li>|7am: 21F</li>
-        <li>|8am: 21F</li>
-    </ul>
- </main>
+    <main id="page-main">
+        <h1 id="locationName">Franklin, ID</h1>
+        <section id="locationInfo">
+            <ul>
+               <li><span class="bold">Zip:</span> 83237  |</li>
+               <li><span class="bold">Elevation: </span> 4968 ft.  |</li>
+               <li><span class="bold">Location:</span> 42.07, 111.79</li>
+            </ul>
+       </section>
+   <div id="curWeather">
+       <section id="temps" class="tile">
+           <h2>Temperature</h2>
+           <p id="currentTemp">55&deg;F</p>
+           <p class="highLow" id="h">64&deg;F</p>
+           <p class="highLow" id="l">41&deg;F</p>
+           <p>Feels Like</p>
+       </section>
+       <section id="wind" class="tile">
+           <h2>Wind</h2>
+           <p>5 mph</p>
+           <p>Direction: SW</p>
+           <p>Gusts: 5 mph</p>
+       </section>    
+       <section id="summary" class="tile">
+           <h2 id="rain-title">Rain</h2>
+       </section>
+   </div>
+   <section id="hourly" class="tile">
+           <h3>Hourly Forecast</h3>
+           <ul>
+               <li>12am: 41&deg;F</li>
+               <li>1am: 41&deg;F</li>
+               <li>2am: 41&deg;F</li>
+               <li>3am: 41&deg;F</li>
+               <li>4am: 41&deg;F</li>
+               <li>5am: 41&deg;F</li>
+               <li>6am: 42&deg;F</li>
+               <li>7am: 44&deg;F</li>
+               <li>8am: 44&deg;F</li>
+               <li>9am: 46&deg;F</li>
+               <li>10am: 49&deg;F</li>
+               <li>11am: 51&deg;F</li>
+               <li>12pm: 55&deg;F</li>
+               <li>1pm: 58&deg;F</li>
+               <li>2pm: 62&deg;F</li>
+               <li>3pm: 64&deg;F</li>
+               <li>4pm: 64&deg;F</li>
+               <li>5pm: 62&deg;F</li>
+               <li>6pm: 61&deg;F</li>
+               <li>7pm: 60&deg;F</li>
+               <li>8pm: 59&deg;F</li>
+               <li>9pm: 58&deg;F</li>
+               <li>10pm: 52&deg;F</li>
+               <li>11pm: 48&deg;F</li>
+           </ul>
+       </section>
+</main>
 
  <footer id="page-footer">
         &copy;2018 - The Weather Site

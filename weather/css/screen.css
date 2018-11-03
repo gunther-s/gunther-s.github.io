@@ -1,6 +1,6 @@
 /* ******************************
 *  Stylesheet for Screened Devices
-*  Created by: Put your name here
+*  Created by: Gunther Schurr
 *  
 *  1.  Includes (fonts and supplementary stylesheets)
 *  1.1 Normalize
@@ -19,7 +19,9 @@
 /* 1.2 Google Font Import */ 
 @import url('https://fonts.googleapis.com/css?family=Sansita');
 
-/* general style rules */
+/* 2. GENERAL STYLE RULES */
+/* 2.1 TYPE */
+
 h1, h2, h3, h4, h5, h6{
     font-family: sansita, sans-serif;
 }
@@ -28,31 +30,80 @@ body{
     font-family: helvetica, sans-serif;
     font-size: 18px;
 }
+header {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
 
 .site-brand{
-    font-size: 5vw;
     display: inline;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
+
+#logo {
+    width: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2.2 Weather boxi */
+#h {
+    color:red;
+    display: inline-block;
+}
+#l {
+    color:blue;
+    display: inline-block;
+}
+#currentTemp {
+    font-size:50px;
+}
+
+html {
+    box-sizing: border-box;
+}
+   
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+.tile {
+    background-color: lightgray;
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 15px;
+    text-align:center;
+  } 
 
 /* border: 270px */
 /* margin: 5px */
 
-#logo {
-    width: 2em;
-    height: auto;
+.tile h2 {
+    display:none;
+}
+#rain-title {
+    display: initial;
+    display: flex;
+    justify-content: center;
+    margin: 0;
 }
 
+/* 2.3 Navigation */
+
 /* Place the navbar at the bottom of the page, and make it stick */
-.bottomnavbar {
+.navbar {
     background-color: white;
     overflow: hidden;
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: 46px;
 }
 
 /* Style the links inside the navigation bar */
-.bottomnavbar a {
+.navbar a {
     float: left;
     display: block;
     justify-content: center;
@@ -63,60 +114,87 @@ body{
     font-size: 24px;
 }
 
-.bottomnavbar a:hover {
+.navbar a:hover {
     background-color: #ddd;
     color: black;
 }
 
 /* Add a color to the active/current link */
-.bottomnavbar a.active {
+.navbar a.active {
     background-color: black;
     color: white;
 }
 
+/* 2.4 Footer */
+#page-footer{
+    margin-bottom:4em;
+   }
+
+/* 2.6 Local */
+#locationInfo ul li { 
+    display: inline-block; 
+    list-style: none;
+    margin: 0px;
+    padding: 5px;
+    font-size: 15px;
+  }
+#locationName {
+    font-weight: 100;
+    margin: 0px;
+    padding: 5px;
+}
+#locationInfo ul {
+    padding-left:0px;
+}
+
+#hourly ul {
+    list-style: none;
+    padding: 0px;
+}
 
 /* 4. Larger Screen Rules */
 
 @media screen and (min-width: 720px) {
     /* All CSS rules for large screens go here */
 
+.navbar{
+    position: sticky;
+    top: 3em;
+    margin: 5px;
 }
 
-#bigF {
-    font-size: 110px;
-    margin-top: 0.2em;
-    margin-bottom: 0;
-    padding-left: 0.05em;
+#curWeather {
+    display: flex;
 }
 
-#degreesR,
-#degreesB {
-    margin: 0px 10px 0px 10px;
-    font-size: 25px;
-
+#curWeather .tile {
+    width: 30%;
+}
+.tile h2 {
+    display: initial;
+}
+#hourly ul {
+    display: flex;
+    overflow-x: auto;
+}
+#hourly li {
+    flex-shrink: 0;
+    border-right: 1px solid black;
+    padding: 0 10px;
+    list-style: none;
+}
+#hourly li:last-child {
+    border-right: none;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0px;
+    border-top: 2px solid black;
+    margin: 1em 0;
+    padding: 0;
 }
 
-#degreesR {
-    color: red;
-}
-
-#degreesB {
-    color: #0e89d5;
-}
-
-#degrees {
-    margin: 0em;
-}
-
-#mph {
-    font-size: 23px;
-    margin-top: 50px;
-    margin-bottom: 60px;
-}
-
-#mph+p {
-    font-size: 15px;
-}
 
 
 /* #hourly-temps li{
@@ -127,3 +205,5 @@ body{
 #hourly-temps li:last-child{
     border-right: none;
 } */
+
+}
