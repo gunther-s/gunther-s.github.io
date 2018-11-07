@@ -1,0 +1,15 @@
+@media (max-width: 449px) {
+    .vp-small {
+      font-weight: bold;
+    }
+  }
+  @media (min-width: 450px) and (max-width: 800px) {
+    .vp-medium {
+      font-weight: bold;
+    }
+  }
+  @media (min-width: 800px) {
+    .vp-large {
+      font-weight: bold;
+    }
+  }
