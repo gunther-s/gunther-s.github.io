@@ -13,3 +13,11 @@
       font-weight: bold;
     }
   }
+
+  picture {
+      float: left;
+      max-width: 100%;
+  }
+  p {
+      overflow: auto;
+  }
