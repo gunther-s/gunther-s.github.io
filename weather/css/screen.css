@@ -90,6 +90,15 @@ html {
     margin: 0;
 }
 
+#pointer {
+    padding: 100px;
+    background-image: url('../images/wind-pointer.png');
+    background-repeat: no-repeat;
+    background-size: 90px;
+    background-position: center;
+}
+
+
 /* 2.3 Navigation */
 
 /* Place the navbar at the bottom of the page, and make it stick */
