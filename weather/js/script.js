@@ -2,6 +2,8 @@
 *  Weather Site JavaScript Functions
 ************************************* */
 
+console.log('My javascript is being read.');
+
 // Variables for Function Use
 const temp = 31;
 const speed = 5;
