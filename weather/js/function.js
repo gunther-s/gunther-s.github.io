@@ -1,20 +1,5 @@
-/* *************************************
-*  Weather Site JavaScript Functions
-************************************* */
 
 console.log('My javascript is being read.');
-
-// Variables for Function Use
-const temp = 31;
-const speed = 5;
-buildWC(speed, temp);
-const direction = "SW"; //Set your own value
-windDial(direction);
-let bImage ="snowstorm";
-getCondition(bImage);
-let sumImage = getCondition(bImage);
-changeSummaryImage(sumImage);
-
 
 function buildWC(speed, temp) {
     const feelTemp = document.getElementById('feelTemp');
@@ -29,7 +14,6 @@ console.log(wc);
 feelTemp.innerHTML = wc;
 }
 
-// Make the wind dial
 function windDial(direction){
     const dial = document.getElementById("pointer");
     console.log(direction);
