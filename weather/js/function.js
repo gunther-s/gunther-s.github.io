@@ -264,15 +264,11 @@ function buildPage(locData){
     windDial(locData.windDirection);
     let sumImage = getCondition(locData.summary);
     getCondition(sumImage);
-
-
     document.getElementById("locName").innerHTML = locData.name + ", " + locData.state;
     document.getElementById("zip").innerHTML = locData.postal;
     document.getElementById("elevation").innerHTML = locData.elevation;
     document.getElementById("geoposition").innerHTML = locData.geoposition;
     document.title = locData.name + ", " + locData.stateAbbr + " | Weather Site";
-    
-
     document.getElementById("currentTemp").innerHTML = locData.currentTemp + "&#8457;";
     document.getElementById("h").innerHTML = locData.pastHigh + "&#8457;";
     document.getElementById("l").innerHTML = locData.pastLow + "&#8457;";
@@ -280,7 +276,6 @@ function buildPage(locData){
     document.getElementById("gusts").innerHTML = locData.windGust;
     document.getElementById("direction").innerHTML = "Direction: " + locData.windDirection;
     document.getElementById("rainHead").innerHTML = locData.summary;
-
     let time = locData.nextHour;
     let hourly = [locData.hourTemp1, locData.hourTemp2, locData.hourTemp3, locData.hourTemp4, locData.hourTemp5, locData.hourTemp6, locData.hourTemp7, locData.hourTemp8, locData.hourTemp9, locData.hourTemp10, locData.hourTemp11, locData.hourTemp12];
 
@@ -293,7 +288,4 @@ function buildPage(locData){
     }
     document.getElementById("page-main").setAttribute("class", "show");
     document.getElementById("status").setAttribute("class", "hide");
-    
-
-
 }
