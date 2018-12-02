@@ -270,6 +270,7 @@ function buildPage(locData){
         document.getElementById((i + "")).innerHTML = time + " " + hourly[i - 1] + "&#8457;";
         time++;
     }
-    document.getElementById("page-main").setAttribute("class", "show");
+    /* document.getElementById("page-main").setAttribute("class", "show");
     document.getElementById("status").setAttribute("class", "hide");
+*/
 }
