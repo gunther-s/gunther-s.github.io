@@ -25,65 +25,57 @@
         <h1 id="locationName">Local Weather</h1>
         <div id="locationInfo">
             <ul>
-               <li><span class="bold">Zip:</span> 83237  |</li>
-               <li><span class="bold">Elevation: </span> 4968 ft.  |</li>
-               <li><span class="bold">Location:</span> 42.07, 111.79</li>
+                <li><b>Zip:</b><span id="zip">83237</span> | </li>
+                <li><strong>Elevation:</strong><span id="elevation">4968 ft.</span> | </li>
+                <li><strong>Location:</strong> <span id="geoposition">42.07, 111.79</span></li>
             </ul>
         </div>
-   <div id="curWeather">
-       <section id="temps" class="tile">
-           <h2>Temperature</h2>
-           <p id="currentTemp">55&deg;F</p>
-           <p class="highLow" id="h">64&deg;F</p>
-           <p class="highLow" id="l">41&deg;F</p>
-           <p>Feels Like</p>
+   <div id="curWeather" class="fog">
+       <section id="temperature" class="tile">
+           <h3>Temp</h3>
+           <p id="currentTemp">55&#8457; </p>
+            <div id="highlow">
+                <p class="highlow" id="h">64&#8457;</p>
+                <p class="highlow" id="l">41&#8457;</p>
+            </div>
+            <p id="feel">Feels Like <span id="feelTemp">??</span>°F</p>
        </section>
        <section id="wind" class="tile">
-           <h2>Wind</h2>
-           <p>N</p>
-            <div id="pointer" class="s"></div>
-            <p id="windspeed">5 mph</p>
-           <p>Direction: SW</p>
-           <p>Gusts: 5 mph</p>
+           <h3>Wind</h3>
+           <div id="dial" class="w"></div>
+            <p id="wind-speed">5 mph</p>
+            <p id="direction">Direction: NW</p>
+            <p>Gusts: <span id="gusts">5mph</span></p>
        </section>    
        <section id="summary" class="tile">
-           <h2 id="rain-title">Rain</h2>
+           <h3 id="rain-title">Rain</h2>
+           <img id="rain" src="/weather/images/rain-small.jpg">
        </section>
    </div>
    <section id="hourly" class="tile">
            <h3>Hourly Forecast</h3>
-           <ul>
-               <li>12am: 41&deg;F</li>
-               <li>1am: 41&deg;F</li>
-               <li>2am: 41&deg;F</li>
-               <li>3am: 41&deg;F</li>
-               <li>4am: 41&deg;F</li>
-               <li>5am: 41&deg;F</li>
-               <li>6am: 42&deg;F</li>
-               <li>7am: 44&deg;F</li>
-               <li>8am: 44&deg;F</li>
-               <li>9am: 46&deg;F</li>
-               <li>10am: 49&deg;F</li>
-               <li>11am: 51&deg;F</li>
-               <li>12pm: 55&deg;F</li>
-               <li>1pm: 58&deg;F</li>
-               <li>2pm: 62&deg;F</li>
-               <li>3pm: 64&deg;F</li>
-               <li>4pm: 64&deg;F</li>
-               <li>5pm: 62&deg;F</li>
-               <li>6pm: 61&deg;F</li>
-               <li>7pm: 60&deg;F</li>
-               <li>8pm: 59&deg;F</li>
-               <li>9pm: 58&deg;F</li>
-               <li>10pm: 52&deg;F</li>
-               <li>11pm: 48&deg;F</li>
+           <ul id="bp">
+            <li id="1">12am: 41&#8457;</li>
+            <li id="2">1am: 41&#8457;</li>
+            <li id="3">2am: 41&#8457;</li>
+            <li id="4">3am: 41&#8457;</li>
+            <li id="5">4am: 41&#8457;</li>
+            <li id="6">5am: 41&#8457;</li>
+            <li id="7">6am: 42&#8457;</li>
+            <li id="8">7am: 44&#8457;</li>
+            <li id="9">8am: 44&#8457;</li>
+            <li id="10">9am: 46&#8457;</li>
+            <li id="11">10am: 49&#8457;</li>
+            <li id="12">11am: 51&#8457;</li>
            </ul>
        </section>
 </main>
 
  <footer id="page-footer">
+        <img id="accuWeatherLogo" src="/weather/images/accuweather_logo.png">
         &copy;2018 - The Weather Site
       </footer>
 <script src="/weather/js/function.js"></script>
+<script src="/weather/js/geo_loc.js"></script>
 </body>
 </html>
