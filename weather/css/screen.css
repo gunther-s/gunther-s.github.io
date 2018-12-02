@@ -49,7 +49,63 @@ header {
     padding: 0;
 }
 
+#locNameInfo ul li { 
+    display: inline-block; 
+    list-style: none;
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+#dial {
+    height: 150px;
+    width: 150px;
+    background: no-repeat center/85% url('/weather/images/wind-pointer.png');
+    z-index: 100;
+    margin: -.6em auto 0;
+    margin-top: 50px;
+}
+
+.n {
+    transform: rotate(0deg);
+}
+.ne {
+    transform: rotate(45deg);
+}
+.e {
+    transform: rotate(90deg);
+}
+.se {
+    transform: rotate(135deg);
+}
+.s {
+    transform: rotate(180deg);
+}
+.sw {
+    transform: rotate(225deg);
+}
+.w {
+    transform: rotate(270deg);
+}
+.nw {
+    transform: rotate(315deg);
+}
+#wind-speed {
+    position: relative;
+    top: -107px;  
+}
+#direction {
+    margin-top: 0px;
+}
+
 /* 2.2 Weather boxi */
+#locName{
+    font-weight: 100;
+    margin-left: 10px;
+}
+.highlow{
+    display: inline-block;
+}
+
 #h {
     color:red;
     display: inline-block;
@@ -90,12 +146,33 @@ html {
     margin: 0;
 }
 
-#pointer {
-    padding: 100px;
-    background-image: url('../images/wind-pointer.png');
-    background-repeat: no-repeat;
-    background-size: 90px;
-    background-position: center;
+.clear {
+    background-image: url("/weather/images/clear-small.jpg");
+}
+.clouds {
+    background-image: url("/weather/images/clouds-small.jpg");
+}
+.fog {
+    background-image: url("/weather/images/fog-small.jpg");
+}
+.rain {
+    background-image: url("/weather/images/rain-small.jpg");
+}
+.snow {
+    background-image: url("/weather/images/snow-small.jpg");
+}
+
+
+#bp {
+    list-style: none;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: initial;
 }
 
 
@@ -199,6 +276,12 @@ html {
 #hourly li:last-child {
     border-right: none;
 }
+
+#pointer{
+    background-size: 40%;
+    padding: 80px;
+}
+
 hr {
     display: block;
     height: 1px;

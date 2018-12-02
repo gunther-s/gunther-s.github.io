@@ -3,7 +3,7 @@
  <head>
   <meta charset="UTF-8">
   <title>Local Weather For You</title>
-  <meta name="description" content="This page gives you weather for Franklin, ID.">
+  <meta name="description" content="This page gives you weather for your current location.">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="/weather/css/screen.css" type="text/css" media="screen">
  </head>
@@ -21,15 +21,17 @@
         </nav>
     </header>
 
-    <main id="page-main">
-        <h1 id="locationName">Local Weather</h1>
-        <div id="locationInfo">
-            <ul>
-                <li><b>Zip:</b><span id="zip">83237</span> | </li>
-                <li><strong>Elevation:</strong><span id="elevation">4968 ft.</span> | </li>
-                <li><strong>Location:</strong> <span id="geoposition">42.07, 111.79</span></li>
-            </ul>
-        </div>
+    <p id="status"></p>
+    <main id="page-main" class="hide">
+        <h2 id="locName">Your location</h2>
+
+    <section id="locNameInfo">
+        <ul>
+            <li><b>Zip:</b><span id="zip">83440</span> | </li>
+            <li><strong>Elevation:</strong><span id="elevation">4968 ft.</span> | </li>
+            <li><strong>Location:</strong> <span id="geoposition">42.07, 111.79</span></li>
+        </ul>
+    </section>
    <div id="curWeather" class="fog">
        <section id="temperature" class="tile">
            <h3>Temp</h3>
@@ -46,14 +48,16 @@
             <p id="wind-speed">5 mph</p>
             <p id="direction">Direction: NW</p>
             <p>Gusts: <span id="gusts">5mph</span></p>
-       </section>    
+       </section>
+
        <section id="summary" class="tile">
-           <h3 id="rain-title">Rain</h2>
-           <img id="rain" src="/weather/images/rain-small.jpg">
+            <h3 id="rainHead">Rain</h3>
+            <img id="rain" src="/weather/images/rain-small.jpg">
        </section>
    </div>
+
    <section id="hourly" class="tile">
-           <h3>Hourly Forecast</h3>
+           <h3>Hourly</h3>
            <ul id="bp">
             <li id="1">12am: 41&#8457;</li>
             <li id="2">1am: 41&#8457;</li>
@@ -71,10 +75,11 @@
        </section>
 </main>
 
- <footer id="page-footer">
-        <img id="accuWeatherLogo" src="/weather/images/accuweather_logo.png">
-        &copy;2018 - The Weather Site
-      </footer>
+<footer id="page-footer">
+<hr>
+    <img id="accuWeatherLogo" src="/weather/images/accuweather_logo.png">
+    <p>&copy;2018 - The Weather Site</p>
+</footer>
 <script src="/weather/js/function.js"></script>
 <script src="/weather/js/geo_loc.js"></script>
 </body>
