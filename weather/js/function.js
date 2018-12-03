@@ -12,29 +12,7 @@
 // let sumImage = getCondition(bImage);
 // changeSummaryImage(sumImage);
 
-
-
-// Calculate the Windchill
-function buildWC(speed, temp) {
-    const feelTemp = document.getElementById('feelTemp');
-    
-    // Compute the windchill
-    let wc = 35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16);
-    console.log(wc);
-
-    // Round the answer down to integer
-    wc = Math.floor(wc);
-
-    // If chill is greater than temp, return the temp
-    wc = (wc > temp)?temp:wc;
-
-    // Display the windchill
-    console.log(wc);
-    feelTemp.innerHTML = wc;
-}
-
-
-// Wind Dial Function
+//Wind Dial Function
 function windDial(direction){
     // Get the container
     const dial = document.getElementById("dial");
@@ -80,57 +58,6 @@ function windDial(direction){
       break;
     }
 }
-
-
-
-//Background Image Function
-/*function getCondition(bImage) {
-    //get the container
-    const curWeather = document.getElementById("curWeather");
-    console.log(bImage);
-
-    //Determin the curWeather class
-    switch(bImage) {
-        case "clear":
-        case "sunny":
-        case "nice":
-        curWeather.setAttribute("class", "clear");
-        //"clear" is the CSS rule selector
-        break;
-        case "cloudy":
-        case "partly cloudy":
-        case "clouds":
-        case "overcast":
-        curWeather.setAttribute("class", "clouds");
-        break;
-        case "fog":
-        case "foggy":
-        case "misty":
-        case "gloomy":
-        curWeather.setAttribute("class", "fog");
-        break;
-        case "rainy":
-        case "rain":
-        case "stormy":
-        case "thunderstorms":
-        case "drizzle":
-        case "pouring":
-        case "wet":
-        case "moist":
-        curWeather.setAttribute("class", "rain");
-        break;
-        case "snow":
-        case "snowy":
-        case "cold":
-        case "blizzard":
-        case "freezing":
-        case "flurries":
-        case "icy":
-        case "snow stroms":
-        curWeather.setAttribute("class", "snow");
-        break;
-    }
-}*/
 
 
 function getCondition(bImage) {
@@ -203,7 +130,6 @@ function changeSummaryImage(sumImage) {
     }
 }
 
-// Get location code from API
 function getCode(LOCALE) {
     const API_KEY = 'arJn7hbGfL3e0IPO8QQEJ6AoaozeGogi';
     const URL = 'https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey='+API_KEY+'&q='+LOCALE;
@@ -223,10 +149,9 @@ function getCode(LOCALE) {
       getWeather(locData);
       })
      .catch(error => console.log('There was a getCode error: ', error))
-  } // end getCode function
+  } 
 
 
-   // Get Current Weather data from API
 function getWeather(locData) {
     const API_KEY = 'arJn7hbGfL3e0IPO8QQEJ6AoaozeGogi';
     const CITY_CODE = locData['key']; // We're getting data out of the object

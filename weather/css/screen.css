@@ -291,6 +291,10 @@ hr {
     padding: 0;
 }
 
+#rain {
+    width: auto;
+    height: 18vw;
+}
 .clear {
     background-image: url("/weather/images/clear-small.jpg");
 }
@@ -303,6 +307,7 @@ hr {
 .rain {
     background-image: url("/weather/images/rain-small.jpg");
 }
+
 .snow {
     background-image: url("/weather/images/snow-small.jpg");
 
