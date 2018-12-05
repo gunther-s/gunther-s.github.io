@@ -15,6 +15,8 @@ MENULINK.addEventListener('click', function (evt) {
  console.log(stateName);
  if(cityName != null){
  evt.preventDefault();
+ const LOCALE = cityName;
+ getData(LOCALE);
  }
 
 });
@@ -23,12 +25,14 @@ MENULINK.addEventListener('click', function (evt) {
 
 //Get location code from weather.json file
 function getData(LOCALE) {
-let URL = "/sandbox/menu/js/weather.json";
+let URL = "weather.json";
  fetch(URL)
   .then(response => response.json())
   .then(function (data) {
    console.log('Json object from getCode function:');
    console.log(data);
+   console.log(data[LOCALE+" "]);
+
    const locData = {}; // Create an object
    locData['key'] = data.Key; // Add the value to the object
     locData['name'] = data.LocalizedName;
@@ -43,5 +47,5 @@ let URL = "/sandbox/menu/js/weather.json";
 
   // A function for changing a string to TitleCase
   function toTitleCase(str){
-    return str.replace(/w+/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+    return str.replace(/\w+/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
   }
