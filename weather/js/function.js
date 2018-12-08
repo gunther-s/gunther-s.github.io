@@ -178,8 +178,7 @@ function getWeather(locData) {
      .then(response => response.json())
      .then(function (data) {
       console.log('Json object from getWeather function:');
-      console.log(data); // Let's see what we got back
-      // Start collecting data and storing it
+      console.log(data);
       locData['currentTemp'] = data[0].Temperature.Imperial.Value;
       locData['summary'] = data[0].WeatherText;
       locData['windSpeed'] = data[0].Wind.Speed.Imperial.Value;
@@ -269,15 +268,15 @@ function getHourly(locData) {
 
 function buildPage(locData){
     // Task 1 - Feed data to WC, Dial and Image functions
-    let temp = locData.currentTemp;
-    let speed = locData.speed;
+    let temp = parseInt(locData.currentTemp);
+    console.log(temp);
+    let speed = locData.windSpeed;
+    console.log(speed);
 
     buildWC(speed, temp);
     windDial(locData.windDirection);
     let sumImage = getCondition(locData.summary);
     getCondition(sumImage);
-
-    // Task 2 - Populate location information
 
     document.getElementById("locName").innerHTML = locData.name + ", " + locData.state;
     document.getElementById("zip").innerHTML = locData.postal;
