@@ -195,6 +195,7 @@ function getWeather(locData) {
 
 
 
+
   // Get next 12 hours of forecast data from API
 
 function getHourly(locData) {
