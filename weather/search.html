@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en-us">
+ <head>
+  <meta charset="UTF-8">
+  <title>Local Weather For You</title>
+  <meta name="description" content="This page gives you weather for your current location.">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/weather/css/screen.css" type="text/css" media="screen">
+ </head>
+<!--Gunther Schurr
+    Johnny Jetton-->
+
+ <body>
+    <header id="page-header">
+        <img src="/weather/images/plan-images/raindrop-emoji-png-4.png" alt="the site logo" id="logo">
+        <!-- check ME! --><h1 class="site-brand">The Weather Site</h1>
+
+        <nav class="navbar">
+            <a href="index.html">Current</a>
+            <a href="search.html" class="active">Search</a>
+            <a href="franklinsite.html">Franklin ID</a>
+            <a href="greenville.html">Greenville ID</a>
+        </nav>
+    </header>
+
+<section>
+    <form method="get" action="https://www.accuweather.com/en/search-locations" id="searchform">
+    <input type="search" name="query" id="query">
+    <input type="submit" name="submit" value="Search" id="send">
+    </form>
+    <div id="searchResults" class=""></div>
+</section>
+
+    <p id="status"></p>
+    <main id="page-main">
+        <h2 id="locName">Your location</h2>
+
+    <section id="locNameInfo">
+        <ul>
+            <li><b>Zip:</b><span id="zip">83440</span> | </li>
+            <li><strong>Elevation:</strong><span id="elevation">4968 ft.</span> | </li>
+            <li><strong>Location:</strong> <span id="geoposition">42.07, 111.79</span></li>
+        </ul>
+    </section>
+   <div id="curWeather" class="fog">
+       <section id="temperature" class="tile">
+           <h3>Temp</h3>
+           <p id="currentTemp">55&#8457; </p>
+            <div id="highlow">
+                <p class="highlow" id="h">64&#8457;</p>
+                <p class="highlow" id="l">41&#8457;</p>
+            </div>
+            <p id="feel">Feels Like <span id="feelTemp">??</span>°F</p>
+       </section>
+       <section id="wind" class="tile">
+           <h3>Wind</h3>
+           <div id="dial" class="w"></div>
+            <p id="wind-speed">5 mph</p>
+            <p id="direction">Direction: NW</p>
+            <p>Gusts: <span id="gusts">5mph</span></p>
+       </section>
+
+       <section id="summary" class="tile">
+            <h3 id="rainHead">Rain</h3>
+            <img id="rain" src="/weather/images/rain-small.jpg" alt="Rainy">
+       </section>
+   </div>
+
+   <section id="hourly" class="tile">
+           <h3>Hourly</h3>
+           <ul id="bp">
+            <li id="1">12am: 41&#8457;</li>
+            <li id="2">1am: 41&#8457;</li>
+            <li id="3">2am: 41&#8457;</li>
+            <li id="4">3am: 41&#8457;</li>
+            <li id="5">4am: 41&#8457;</li>
+            <li id="6">5am: 41&#8457;</li>
+            <li id="7">6am: 42&#8457;</li>
+            <li id="8">7am: 44&#8457;</li>
+            <li id="9">8am: 44&#8457;</li>
+            <li id="10">9am: 46&#8457;</li>
+            <li id="11">10am: 49&#8457;</li>
+            <li id="12">11am: 51&#8457;</li>
+           </ul>
+       </section>
+</main>
+
+<footer id="page-footer">
+    <img id="accuWeatherLogo" src="/weather/images/accuweather_logo.png" alt="The weather logooooooo">
+    <p>&copy;2018 - The Weather Site</p>
+</footer>
+<script src="/weather/js/function.js"></script>
+<script src="/weather/js/search.js"></script>
+</body>
+</html>
